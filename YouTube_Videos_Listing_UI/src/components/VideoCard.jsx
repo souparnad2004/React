@@ -1,6 +1,6 @@
 function VideoCard({ video }) {
   if(!video) return null;
-  const { snippet, statistics, contentDetails } = video;
+  const { snippet, statistics, contentDetails, id } = video;
   function formatDuration(duration) {
     const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
     const hours = match[1] || "0";
@@ -16,6 +16,7 @@ function VideoCard({ video }) {
 
 
   return (
+    <a href={`https://www.youtube.com/watch?v=${id}`}>
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-xl flex flex-col">
       <div className="relative">
         <img
@@ -59,6 +60,7 @@ function VideoCard({ video }) {
         </p>
       </div>
     </div>
+    </a>
   );
 }
 export default VideoCard;
