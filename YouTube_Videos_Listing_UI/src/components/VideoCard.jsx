@@ -16,7 +16,7 @@ function VideoCard({ video }) {
 
 
   return (
-    <a href={`https://www.youtube.com/watch?v=${id}`}>
+    <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank">
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-xl flex flex-col">
       <div className="relative">
         <img
